@@ -1,11 +1,12 @@
 package com.caffe.inner.klass;
 
 /**
- * @author Caffe
+ * @author BitterCaffe
  * @date 2020/8/19
  * @description: 这里为何要写内部类，因为在看各种源码的时候都会使用内部类，而且是各种内部类，
  * 如果对内部类的用法不熟悉或为何使用这种内部类不熟悉的话那就很难理解为何这么写了。所以在这里来聊聊各种内部类的用法！
  */
+
 public class AnonymousInnerClass {
     private Integer age = 10;
     private String name = "name";

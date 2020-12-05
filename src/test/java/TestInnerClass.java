@@ -1,4 +1,4 @@
-import com.caffe.inner.klass.AnonymousInnerClass;
+import com.caffe.inner.klass.anonymousinnerclass.AnonymousInnerClass;
 
 /**
  * @author Caffe
@@ -8,7 +8,6 @@ import com.caffe.inner.klass.AnonymousInnerClass;
 public class TestInnerClass {
     public static void main(String[] args) {
         AnonymousInnerClass anonymousInnerClass = new AnonymousInnerClass();
-        int res = anonymousInnerClass.add();
-        System.out.println("res:" + res);
+        anonymousInnerClass.add(3, 5);
     }
 }

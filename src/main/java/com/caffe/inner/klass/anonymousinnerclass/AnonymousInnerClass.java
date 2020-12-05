@@ -1,10 +1,18 @@
-package com.caffe.inner.klass;
+package com.caffe.inner.klass.anonymousinnerclass;
 
 /**
  * @author BitterCaffe
  * @date 2020/8/19
  * @description: 这里为何要写内部类，因为在看各种源码的时候都会使用内部类，而且是各种内部类，
- * 如果对内部类的用法不熟悉或为何使用这种内部类不熟悉的话那就很难理解为何这么写了。所以在这里来聊聊各种内部类的用法！
+ * 如果对内部类的用法不熟悉或为何使用这种内部类不熟悉的话那就很难理解为何这么写了。
+ * 所以在这里来聊聊各种内部类的用法！
+ * <p>
+ * <p>
+ * <p>
+ * <p>
+ * 匿名内部类：
+ * （1）、匿名内部类和普通类，普通内部类之间的关系，相比匿名内部类又那些优势，在那些场景下使用匿名内部类
+ * （2）、用匿名内部类实现回调功能，下面这种方式就是回调功能的实现
  */
 
 public class AnonymousInnerClass {
@@ -12,18 +20,19 @@ public class AnonymousInnerClass {
     private String name = "name";
 
 
-    public int add() {
-        return this.doAdd(new IAnonymousInnerClass() {
+    public void add(int a, int b) {
+        this.doAdd(new IAnonymousInnerClass() {
 
             @Override
-            public Integer add(int a, int b) {
+            public void add(int a, int b) {
                 System.out.println(String.format("age:%s&name:%s", age, name));
                 int c = a + b;
                 // 可以灵活使用私有内部类
                 c = c >= age ? c : age;
-                return c;
+                //匿名内部类中做一些事情
+                System.out.println("比较大的值" + c);
             }
-        }, 1, 3);
+        }, a, b);
     }
 
     /**
@@ -40,7 +49,7 @@ public class AnonymousInnerClass {
      * @param b
      * @return
      */
-    public Integer doAdd(IAnonymousInnerClass iAnonymousInnerClass, int a, int b) {
-        return iAnonymousInnerClass.add(a, b);
+    public void doAdd(IAnonymousInnerClass iAnonymousInnerClass, int a, int b) {
+        iAnonymousInnerClass.add(a, b);
     }
 }

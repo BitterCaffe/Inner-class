@@ -1,4 +1,4 @@
-package com.caffe.inner.klass;
+package com.caffe.inner.klass.anonymousinnerclass;
 
 /**
  * @author BitterCaffe
@@ -13,5 +13,5 @@ public interface IAnonymousInnerClass {
      * @param b
      * @return
      */
-    Integer add(int a, int b);
+    void add(int a, int b);
 }
